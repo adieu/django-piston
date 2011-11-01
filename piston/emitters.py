@@ -385,7 +385,7 @@ class YAMLEmitter(Emitter):
 
 if yaml:  # Only register yaml if it was import successfully.
     Emitter.register('yaml', YAMLEmitter, 'application/x-yaml; charset=utf-8')
-    Mimer.register(yaml.load, ('application/x-yaml',))
+    Mimer.register(yaml.safe_load, ('application/x-yaml',))
 
 class PickleEmitter(Emitter):
     """
